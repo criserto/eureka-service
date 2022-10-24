@@ -1,0 +1,16 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: reto-config-server
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/criserto/eureka-service.git
+          search-paths:
+            - '*service*'
+
+        default-label: master
